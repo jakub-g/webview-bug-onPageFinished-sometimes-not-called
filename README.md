@@ -5,6 +5,8 @@ For some reason `onPageFinished` is not always called when loading an HTML file 
 
     webView.loadUrl("file:///android_asset/test.html");
 
+(See the full code [here](https://github.com/jakub-g/webview-bug-onPageFinished-sometimes-not-called/tree/master/app/src/main/java/org/example/webviewcallbacktest))
+
 Expected output:
 
     10-12 15:44:54.704 12106-12106/org.example.webviewcallbacktest D/WebViewTest: Loading the HTML file...
