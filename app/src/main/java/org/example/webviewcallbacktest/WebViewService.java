@@ -67,8 +67,6 @@ public class WebViewService {
     private WebView getWebView() {
         if (webView == null) {
             webView = new WebView(context);
-
-            webView.getSettings().setAllowFileAccessFromFileURLs(true);
         }
 
         return webView;
