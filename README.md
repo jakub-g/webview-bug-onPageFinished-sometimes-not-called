@@ -5,6 +5,9 @@ For some reason `onPageFinished` is not always called when loading an HTML file 
 
     webView.loadUrl("file:///android_asset/test.html");
 
+*unless `webView` is attached on screen*. If the WebView is headless, then the page fails to load,
+and `onPageFinished` callback is not called.
+
 (See the full code [here](https://github.com/jakub-g/webview-bug-onPageFinished-sometimes-not-called/tree/master/app/src/main/java/org/example/webviewcallbacktest))
 
 Expected output:
@@ -23,7 +26,8 @@ But sometimes the output is:
     10-12 15:38:27.721 31408-31408/org.example.webviewcallbacktest D/WebViewTest: onProgressChanged: 10
     10-12 15:38:27.721 31408-31408/org.example.webviewcallbacktest D/WebViewTest: onProgressChanged: 10
 
-The bug is reproducible both for debuggable and non-debuggable app / WebView.
+The bug is reproducible both for debuggable and non-debuggable app / WebView;
+when connected to WiFi or in airplane mode.
 
 When app and WebView are made debuggable, when the bug is reproduced, the page does not appear on the list
 of debug targets of `chrome://inspect/#devices` page.

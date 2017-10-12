@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         WebView webView = new WebViewService(this).loadPage();
 
-        attachToScreen(webView);
+        // attachToScreen(webView);
     }
 
     private void attachToScreen(WebView webView) {
