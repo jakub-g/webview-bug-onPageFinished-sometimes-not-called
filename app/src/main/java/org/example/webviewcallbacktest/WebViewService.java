@@ -13,17 +13,16 @@ import android.webkit.WebViewClient;
 
 public class WebViewService {
 
-    private Context context;
     private WebView webView;
 
     public WebViewService(Context context) {
-        this.context = context;
+        this.webView = new WebView(context);
     }
 
     public void loadPage() {
         WebView.setWebContentsDebuggingEnabled(true);
 
-        WebView wv = getWebView();
+        WebView wv = this.webView;
         wv.setWebViewClient(new WebViewClient() {
             @Override
             public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
@@ -64,13 +63,5 @@ public class WebViewService {
 
     private void log(String str) {
         Log.d("WebViewTest", str);
-    }
-
-    private WebView getWebView() {
-        if (webView == null) {
-            webView = new WebView(context);
-        }
-
-        return webView;
     }
 }
