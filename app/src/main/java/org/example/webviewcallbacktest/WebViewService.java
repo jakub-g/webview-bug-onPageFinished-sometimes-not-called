@@ -68,8 +68,6 @@ public class WebViewService {
         if (webView == null) {
             webView = new WebView(context);
 
-            webView.getSettings().setDomStorageEnabled(true);
-            webView.getSettings().setJavaScriptEnabled(true);
             webView.getSettings().setAllowFileAccessFromFileURLs(true);
         }
 
