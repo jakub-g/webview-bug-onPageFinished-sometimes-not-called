@@ -14,6 +14,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        new WebViewService(this.getApplicationContext()).loadPage();
+        new WebViewService(this).loadPage();
     }
 }
