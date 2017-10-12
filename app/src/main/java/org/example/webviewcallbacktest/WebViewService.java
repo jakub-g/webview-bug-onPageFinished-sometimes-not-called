@@ -19,7 +19,7 @@ public class WebViewService {
         this.webView = new WebView(context);
     }
 
-    public void loadPage() {
+    public WebView loadPage() {
         // WebView.setWebContentsDebuggingEnabled(true);
 
         WebView wv = this.webView;
@@ -59,6 +59,8 @@ public class WebViewService {
 
         log("Loading the HTML file...");
         wv.loadUrl("file:///android_asset/test.html");
+
+        return wv;
     }
 
     private void log(String str) {
