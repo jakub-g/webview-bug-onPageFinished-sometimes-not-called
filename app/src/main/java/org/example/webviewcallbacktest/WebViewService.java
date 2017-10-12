@@ -21,6 +21,8 @@ public class WebViewService {
     }
 
     public void loadPage() {
+        WebView.setWebContentsDebuggingEnabled(true);
+
         WebView wv = getWebView();
         wv.setWebViewClient(new WebViewClient() {
             @Override
