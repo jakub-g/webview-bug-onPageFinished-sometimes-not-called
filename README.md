@@ -23,7 +23,10 @@ But sometimes the output is:
     10-12 15:38:27.721 31408-31408/org.example.webviewcallbacktest D/WebViewTest: onProgressChanged: 10
     10-12 15:38:27.721 31408-31408/org.example.webviewcallbacktest D/WebViewTest: onProgressChanged: 10
 
+The bug is reproducible both for debuggable and non-debuggable app / WebView.
+
 When app and WebView are made debuggable, when the bug is reproduced, the page does not appear on the list
 of debug targets of `chrome://inspect/#devices` page.
 
-Reproduced on Android 8.0 Nexus 6P, WebView 61.0.3163.98.
+Reproduced on Android 8.0 Nexus 6P, WebView Stable 61.0.3163.98 / WebView Canary 63.0.3238.0.
+Also reproduced on other Android versions and vendors.

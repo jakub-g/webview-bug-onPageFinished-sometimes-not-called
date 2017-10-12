@@ -20,7 +20,7 @@ public class WebViewService {
     }
 
     public void loadPage() {
-        WebView.setWebContentsDebuggingEnabled(true);
+        // WebView.setWebContentsDebuggingEnabled(true);
 
         WebView wv = this.webView;
         wv.setWebViewClient(new WebViewClient() {
